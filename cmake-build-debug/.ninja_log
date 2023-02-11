@@ -1,0 +1,7 @@
+# ninja log v5
+8	74	6978266542910031	CMakeFiles/tiendaDeportiva.dir/interfaces/Categoria.cpp.obj	11e1340b932437c2
+3	541	6978266547596045	CMakeFiles/tiendaDeportiva.dir/main.cpp.obj	83dc458e38f9903a
+541	720	6978266548949349	tiendaDeportiva.exe	9a1cedb477121e13
+3	548	6978309402940178	CMakeFiles/tiendaDeportiva.dir/main.cpp.obj	83dc458e38f9903a
+3	495	6978310793853100	CMakeFiles/tiendaDeportiva.dir/main.cpp.obj	83dc458e38f9903a
+7	506	6978310793971052	CMakeFiles/tiendaDeportiva.dir/clases/Producto.cpp.obj	5e5b6eab68939cd7
