@@ -1,0 +1,14 @@
+//
+// Created by USUARIO on 11/02/2023.
+//
+
+#ifndef TIENDADEPORTIVA_ACCESORIOS_H
+#define TIENDADEPORTIVA_ACCESORIOS_H
+
+
+class Accesorios {
+
+};
+
+
+#endif //TIENDADEPORTIVA_ACCESORIOS_H

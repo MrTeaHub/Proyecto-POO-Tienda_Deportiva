@@ -1,0 +1,14 @@
+//
+// Created by USUARIO on 11/02/2023.
+//
+
+#ifndef TIENDADEPORTIVA_CANILLERA_H
+#define TIENDADEPORTIVA_CANILLERA_H
+
+
+class Canillera {
+
+};
+
+
+#endif //TIENDADEPORTIVA_CANILLERA_H
