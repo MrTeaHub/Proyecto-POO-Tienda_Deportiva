@@ -5,11 +5,9 @@
 #include "Producto.h"
 
 Producto::Producto(const string &nombre, const string &referencia, const string &color, const string &marca,
-                   const string &genero, const string &modelo, const string &material, const string &categoria,
-                   int precio, int garantia, int stock, float talla) : nombre(nombre), referencia(referencia),
+                   const string &genero, const string &modelo, const string &material, int precio, int garantia, int stock, float talla) : nombre(nombre), referencia(referencia),
                                                                        color(color), marca(marca), genero(genero),
-                                                                       modelo(modelo), material(material),
-                                                                       categoria(categoria), precio(precio),
+                                                                       modelo(modelo), material(material),precio(precio),
                                                                        garantia(garantia), stock(stock), talla(talla) {}
 
 const string &Producto::getNombre() const {
@@ -73,7 +71,6 @@ const string &Producto::getCategoria() const {
 }
 
 void Producto::setCategoria(const string &categoria) {
-    Producto::categoria = categoria;
 }
 
 int Producto::getPrecio() const {
@@ -108,9 +105,13 @@ void Producto::setTalla(float talla) {
     Producto::talla = talla;
 }
 
+string Producto::tipoCategoria() {
+    return "Producto";
+}
+
 ostream &operator<<(ostream &out, Producto &p) {
     cout << "Descripcion del producto: " << endl << endl;
-    cout << "Categoria: " << p.getCategoria() << endl;
+    cout << "Categoria: " << p.tipoCategoria() << endl;
     cout << "Nombre: " << p.getNombre() << endl;
     cout << "Genero: " << p.getGenero() << endl;
     cout << "Marca: " << p.getMarca() << endl;
@@ -125,6 +126,8 @@ ostream &operator<<(ostream &out, Producto &p) {
     cout << "Modelo:" << p.getModelo() << endl;
     return out;
 }
+
+
 
 
 

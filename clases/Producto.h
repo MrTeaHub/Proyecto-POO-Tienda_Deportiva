@@ -16,9 +16,9 @@ private:
     int precio, garantia, stock;
     float talla;
 public:
-    Producto():precio(), garantia(), stock(),talla(){}
+    Producto(): categoria(""),precio(), garantia(), stock(),talla(){}
     Producto(const string &nombre, const string &referencia, const string &color, const string &marca,
-             const string &genero, const string &modelo, const string &material, const string &categoria, int precio,
+             const string &genero, const string &modelo, const string &material, int precio,
              int garantia, int stock, float talla);
 
     const string &getNombre() const;
@@ -69,9 +69,9 @@ public:
 
     void setTalla(float talla);
 
+    string tipoCategoria();
+
     friend ostream& operator<<(ostream &out, Producto &p);
-
-
 };
 
 

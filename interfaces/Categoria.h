@@ -4,11 +4,12 @@
 
 #ifndef TIENDADEPORTIVA_CATEGORIA_H
 #define TIENDADEPORTIVA_CATEGORIA_H
-
+#include <iostream>
+using namespace std;
 
 class Categoria {
 public:
-    virtual void categoria();
+    virtual string tipoCategoria()=0;
 };
 
 
