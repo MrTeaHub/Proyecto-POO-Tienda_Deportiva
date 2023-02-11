@@ -69,8 +69,6 @@ public:
 
     void setTalla(float talla);
 
-    string tipoCategoria();
-
     friend ostream& operator<<(ostream &out, Producto &p);
 };
 
