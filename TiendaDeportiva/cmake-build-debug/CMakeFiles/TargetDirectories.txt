@@ -1,3 +1,0 @@
-C:/Users/crism/CLionProjects/TiendaDeportiva/cmake-build-debug/CMakeFiles/TiendaDeportiva.dir
-C:/Users/crism/CLionProjects/TiendaDeportiva/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/crism/CLionProjects/TiendaDeportiva/cmake-build-debug/CMakeFiles/rebuild_cache.dir
