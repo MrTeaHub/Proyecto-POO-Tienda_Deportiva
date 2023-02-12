@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/USUARIO/OneDrive/Documentos/Proyectos Clion/tiendaDeportiva
+# Install script for directory: C:/Users/USUARIO/OneDrive/Escritorio/ProyectoPoo/tiendaDeportiva
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/USUARIO/OneDrive/Documentos/Proyectos Clion/tiendaDeportiva/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/USUARIO/OneDrive/Escritorio/ProyectoPoo/tiendaDeportiva/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
