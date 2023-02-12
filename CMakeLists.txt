@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.24)
+project(tiendaDeportiva)
+
+set(CMAKE_CXX_STANDARD 17)
+
+add_executable(tiendaDeportiva main.cpp interfaces/Categoria.h clases_abstractas/Producto.cpp clases_abstractas/Producto.h clases/accesorios/Accesorio.cpp clases/accesorios/Accesorio.h clases/accesorios/Gorra.cpp clases/accesorios/Gorra.h interfaces/AccesoriosI.h clases/accesorios/Balon.cpp clases/accesorios/Balon.h clases/accesorios/Guante.cpp clases/accesorios/Guante.h clases/accesorios/Canillera.cpp clases/accesorios/Canillera.h clases/condecoraciones/Condecoracion.cpp clases/condecoraciones/Condecoracion.h clases/condecoraciones/Trofeo.cpp clases/condecoraciones/Trofeo.h clases/condecoraciones/Medalla.cpp clases/condecoraciones/Medalla.h clases/calzado/calzado.cpp clases/calzado/calzado.h interfaces/CalzadoI.h clases/calzado/Tennis.cpp clases/calzado/Tennis.h clases/ropa/Ropa.cpp clases/ropa/Ropa.h clases_abstractas/RopaDeportiva.cpp clases_abstractas/RopaDeportiva.h clases/ropa/Pantaloneta.cpp clases/ropa/Pantaloneta.h clases/ropa/Camiseta.cpp clases/ropa/Camiseta.h clases/ropa/Media.cpp clases/ropa/Media.h interfaces/ChaquetaI.h clases/ropa/Chaqueta.cpp clases/ropa/Chaqueta.h interfaces/LicraI.h clases/ropa/Licra.cpp clases/ropa/Licra.h)
