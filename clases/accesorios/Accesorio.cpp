@@ -13,4 +13,22 @@ string Accesorio::tipoCategoria() {
     return "Accesorio";
 }
 
+ostream &operator<<(ostream &out, Accesorio &a) {
+    cout << "Descripcion del producto: " << endl << endl;
+    cout << "Categoria: " << a.tipoCategoria() << endl;
+    cout << "Nombre: " << a.getNombre() << endl;
+    cout << "Genero: " << a.getGenero() << endl;
+    cout << "Marca: " << a.getMarca() << endl;
+    cout << "Color: " << a.getColor() <<endl;
+    cout << "Talla: " << a.getTalla() << endl;
+    cout << "Precio: " << a.getPrecio() << endl;
+    cout << "Stock: " << a.getStock() << endl;
+    cout << "Garantia: " << a.getGarantia() << endl;
+    cout << "-----------------------------------------" << endl;
+    cout << "Material: " << a.getMaterial() << endl;
+    cout << "Referencia: " << a.getReferencia() << endl;
+    cout << "Modelo:" << a.getModelo() << endl;
+    return out;
+}
+
 

@@ -16,7 +16,7 @@ private:
     int precio, garantia, stock;
     float talla;
 public:
-    Producto(): categoria(""),precio(), garantia(), stock(),talla(){}
+    Producto(): categoria(""),precio(0), garantia(0), stock(),talla(0.0){}
     Producto(const string &nombre, const string &referencia, const string &color, const string &marca,
              const string &genero, const string &modelo, const string &material, int precio,
              int garantia, int stock, float talla);

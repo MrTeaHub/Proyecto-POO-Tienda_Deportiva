@@ -105,12 +105,6 @@ void Producto::setTalla(float talla) {
     Producto::talla = talla;
 }
 
-/*
-string Producto::tipoCategoria() {
-    return "Producto";
-}
-*/
-
 ostream &operator<<(ostream &out, Producto &p) {
     cout << "Descripcion del producto: " << endl << endl;
     cout << "Categoria: " << p.tipoCategoria() << endl;

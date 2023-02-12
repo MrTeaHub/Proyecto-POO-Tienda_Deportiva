@@ -5,9 +5,12 @@
 #ifndef TIENDADEPORTIVA_CALZADOI_H
 #define TIENDADEPORTIVA_CALZADOI_H
 
+#include <iostream>
+
+using namespace std;
 
 class CalzadoI {
-
+    virtual string cordones()=0;
 };
 
 

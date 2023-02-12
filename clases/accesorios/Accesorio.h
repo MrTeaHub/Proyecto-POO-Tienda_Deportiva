@@ -5,7 +5,7 @@
 #ifndef TIENDADEPORTIVA_ACCESORIO_H
 #define TIENDADEPORTIVA_ACCESORIO_H
 
-#include "../clases_abstractas/Producto.h"
+#include "../../clases_abstractas/Producto.h"
 
 class Accesorio: public Producto{
 public:
@@ -16,6 +16,8 @@ public:
               float talla);
 
     string tipoCategoria() override;
+
+    friend ostream &operator<<(ostream &out, Accesorio &a);
 };
 
 

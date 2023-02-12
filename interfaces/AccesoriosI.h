@@ -2,13 +2,16 @@
 // Created by USUARIO on 11/02/2023.
 //
 
-#ifndef TIENDADEPORTIVA_ACCESORIOS_H
-#define TIENDADEPORTIVA_ACCESORIOS_H
+#ifndef TIENDADEPORTIVA_ACCESORIOSI_H
+#define TIENDADEPORTIVA_ACCESORIOSI_H
 
+#include <iostream>
 
-class Accesorios {
+using namespace std;
 
+class AccesoriosI {
+    virtual string conCierreAjustable()=0;
 };
 
 
-#endif //TIENDADEPORTIVA_ACCESORIOS_H
+#endif //TIENDADEPORTIVA_ACCESORIOSI_H
