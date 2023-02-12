@@ -1,0 +1,14 @@
+//
+// Created by USUARIO on 11/02/2023.
+//
+
+#ifndef TIENDADEPORTIVA_PANTALONETA_H
+#define TIENDADEPORTIVA_PANTALONETA_H
+
+
+class Pantaloneta {
+
+};
+
+
+#endif //TIENDADEPORTIVA_PANTALONETA_H

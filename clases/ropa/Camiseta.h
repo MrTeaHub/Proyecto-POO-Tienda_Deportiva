@@ -1,0 +1,14 @@
+//
+// Created by USUARIO on 11/02/2023.
+//
+
+#ifndef TIENDADEPORTIVA_CAMISETA_H
+#define TIENDADEPORTIVA_CAMISETA_H
+
+
+class Camiseta {
+
+};
+
+
+#endif //TIENDADEPORTIVA_CAMISETA_H
