@@ -5,7 +5,7 @@
 #ifndef TIENDADEPORTIVA_CONDECORACION_H
 #define TIENDADEPORTIVA_CONDECORACION_H
 
-#include "../../clases_abstractas/Producto.h"
+#include "../../../clases_abstractas/Producto.h"
 
 class Condecoracion: public Producto{
 private:

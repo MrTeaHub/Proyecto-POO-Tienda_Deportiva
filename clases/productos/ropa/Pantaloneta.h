@@ -6,7 +6,7 @@
 #define TIENDADEPORTIVA_PANTALONETA_H
 
 #include "Ropa.h"
-#include "../../clases_abstractas/RopaDeportiva.h"
+#include "../../../clases_abstractas/RopaDeportiva.h"
 
 class Pantaloneta: public Ropa, public RopaDeportiva{
 private:

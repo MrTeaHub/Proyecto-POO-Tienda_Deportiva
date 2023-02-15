@@ -6,7 +6,7 @@
 #define TIENDADEPORTIVA_CAMISETA_H
 
 #include "Ropa.h"
-#include "../../clases_abstractas/RopaDeportiva.h"
+#include "../../../clases_abstractas/RopaDeportiva.h"
 
 
 class Camiseta: public Ropa, public RopaDeportiva{
@@ -25,7 +25,7 @@ public:
 
     string conjuntoCamisetaPantaloneta()override;
 
-    friend ostream &operator<<(ostream &out, Camiseta &c);
+    friend ostream &operator<<(ostream &out, Camiseta *c);
 };
 
 

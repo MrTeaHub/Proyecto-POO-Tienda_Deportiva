@@ -6,7 +6,7 @@
 #define TIENDADEPORTIVA_CHAQUETA_H
 
 #include "Ropa.h"
-#include "../../interfaces/ChaquetaI.h"
+#include "../../../interfaces/ChaquetaI.h"
 
 class Chaqueta: public Ropa, public ChaquetaI{
 private:

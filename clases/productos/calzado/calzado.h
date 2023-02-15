@@ -5,8 +5,8 @@
 #ifndef TIENDADEPORTIVA_CALZADO_H
 #define TIENDADEPORTIVA_CALZADO_H
 
-#include "../../clases_abstractas/Producto.h"
-#include "../../interfaces/CalzadoI.h"
+#include "../../../clases_abstractas/Producto.h"
+#include "../../../interfaces/CalzadoI.h"
 
 class Calzado: public Producto, public CalzadoI{
 private:

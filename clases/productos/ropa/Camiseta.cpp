@@ -25,28 +25,28 @@ string Camiseta::conjuntoCamisetaPantaloneta() {
     return (RopaDeportiva::getEquipo()) ? "Si" : "No";
 }
 
-ostream &operator<<(ostream &out, Camiseta &c) {
+ostream &operator<<(ostream &out, Camiseta *c) {
     cout << "Descripcion del producto: " << endl << endl;
-    cout << "Categoria: " << c.tipoCategoria() << endl;
-    cout << "Nombre: " << c.getNombre() << endl;
-    cout << "Tipo de deporte: " << c.getTipoDeporte() << endl;
-    cout << "Equipo: " << c.conjuntoCamisetaPantaloneta() << endl;
+    cout << "Categoria: " << c->tipoCategoria() << endl;
+    cout << "Nombre: " << c->getNombre() << endl;
+    cout << "Tipo de deporte: " << c->getTipoDeporte() << endl;
+    cout << "Equipo: " << c->conjuntoCamisetaPantaloneta() << endl;
 
-    if(c.getEquipo()){
-        cout << "Nombre del equipo: " << c.getNombreEquipo() << endl;
+    if(c->getEquipo()){
+        cout << "Nombre del equipo: " << c->getNombreEquipo() << endl;
     }
 
-    cout << "Genero: " << c.getGenero() << endl;
-    cout << "Marca: " << c.getMarca() << endl;
-    cout << "Color: " << c.getColor() <<endl;
-    cout << "Talla: " << c.getTalla() << endl;
-    cout << "Precio: " << c.getPrecio() << endl;
-    cout << "Stock: " << c.getStock() << endl;
-    cout << "Garantia: " << c.getGarantia() << endl;
+    cout << "Genero: " << c->getGenero() << endl;
+    cout << "Marca: " << c->getMarca() << endl;
+    cout << "Color: " << c->getColor() <<endl;
+    cout << "Talla: " << c->getTalla() << endl;
+    cout << "Precio: " << c->getPrecio() << endl;
+    cout << "Stock: " << c->getStock() << endl;
+    cout << "Garantia: " << c->getGarantia() << endl;
     cout << "-----------------------------------------" << endl;
-    cout << "Material: " << c.getMaterial() << endl;
-    cout << "Referencia: " << c.getReferencia() << endl;
-    cout << "Modelo:" << c.getModelo() << endl;
+    cout << "Material: " << c->getMaterial() << endl;
+    cout << "Referencia: " << c->getReferencia() << endl;
+    cout << "Modelo:" << c->getModelo() << endl;
     return out;
 }
 

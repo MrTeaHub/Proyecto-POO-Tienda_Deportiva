@@ -5,7 +5,7 @@
 #ifndef TIENDADEPORTIVA_ROPA_H
 #define TIENDADEPORTIVA_ROPA_H
 
-#include "../../clases_abstractas/Producto.h"
+#include "../../../clases_abstractas/Producto.h"
 
 class Ropa: public Producto{
 public:

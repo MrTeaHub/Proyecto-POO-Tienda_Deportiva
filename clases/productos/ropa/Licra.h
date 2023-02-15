@@ -6,7 +6,7 @@
 #define TIENDADEPORTIVA_LICRA_H
 
 #include "Ropa.h"
-#include "../../interfaces/LicraI.h"
+#include "../../../interfaces/LicraI.h"
 
 
 class Licra: public Ropa, public LicraI{

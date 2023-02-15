@@ -10,7 +10,7 @@
 using namespace std;
 
 // clase abstracta
-class Producto: public Categoria  {
+class Producto: public Categoria {
 private:
     string nombre, referencia, color, marca, genero, modelo, material, categoria;
     int precio, garantia, stock;

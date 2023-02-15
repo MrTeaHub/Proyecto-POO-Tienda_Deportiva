@@ -6,7 +6,7 @@
 #define TIENDADEPORTIVA_GORRA_H
 
 #include "Accesorio.h"
-#include "../../interfaces/AccesoriosI.h"
+#include "../../../interfaces/AccesoriosI.h"
 
 class Gorra: public Accesorio, public AccesoriosI{
 private:
