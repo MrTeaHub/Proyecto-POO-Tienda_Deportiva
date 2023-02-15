@@ -7,7 +7,7 @@
 
 
 class LiquidacionNomina {
-    virtual void calcularNomina()=0;
+    virtual float calcularNomina()=0;
 };
 
 

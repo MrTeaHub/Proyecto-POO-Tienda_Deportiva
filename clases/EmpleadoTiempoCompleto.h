@@ -14,16 +14,15 @@ private:
     int salario;
 public:
     EmpleadoTiempoCompleto();
-    EmpleadoTiempoCompleto(string nombre, string documentoIdentidad, string cargo, string fechaContratacion, string Telefono, int productosVendidos, int tipoEmpleado,
-                           string Nombre, string direccion, int numeroEmpleados, vector<Empleado *> empleados, int salario);
+    EmpleadoTiempoCompleto(string nombre, string documentoIdentidad, string cargo, string fechaContratacion, string Telefono, int productosVendidos, int tipoEmpleado, int salario);
 
     int getSalario();
 
     void setSalario(int salario);
 
-    void calcularBeneficios();
+    float calcularBeneficios()override;
 
-    void calcularNomina();
+    float calcularNomina()override;
 
     friend ostream& operator<<(ostream &out, EmpleadoTiempoCompleto ET);
 };

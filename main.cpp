@@ -34,7 +34,17 @@ int main(){
     vector<Producto *>listaProductos={
             new Camiseta("Camiseta Deportiva","ASFF12","Azul", "Nike", "Masculino","2023","Algodon",10000,2,345,3.4,"Futbol","Barcelona",true, "Cuello"),
             new Chaqueta("Camiseta Lujosa","ASFF12","Azul", "Nike", "Masculino","2023","Algodon",90000,2,345,3.4,2,true,
-                         true)
+                         true),
+            new Media("Media elastica","FAFOL","blanco","nike","unisex","2023","Algodon",35000,1,123,3.2,"Alto"),
+            new Licra("Licra Pro","LIRCA","negro","Adidas","Masculino","2023","superflex",95000,1,42,3.5,true,true),
+            new Pantaloneta("Pantaloneta Mpa","PANTLA", "negro y rojo","Under","femenino","2023","Lana",65000,2,43,2.3,"Baloncesto","Real",true,4),
+            new Tennis("Tennis Running","TBNR","Blanco","Puma","masculino", "2023","cuero",350000,2,64,9.6,"Ligera","Running",true,"Cemento"),
+            new Balon("Balon del mundial","BLFAN", "Blanco y negro","Adidas","unisex","2022","higthTecnho",499000,2,135,3.4,6.4),
+            new Gorra("Gorra natural","GFAAF","cafe","Pupies", "masculino","2023","cuero",390000,1,21,4.6, true),
+            new Guante("Guante para pesas","AFGLKA","gris","Shark","unisex","2023","algodon",30000,3,79,2.5),
+            new Canillera("Canillera Lebron","CNLEL", "rojo","Lebron","masculino","2023","metal",590000,8,10,7.8),
+            new Trofeo("Trofeo Oro","TROTO","amarillo","Petro","unisex","2023","Oro",430000,1,45,7.8,54.7,4.3,6.4),
+            new Medalla("Medalla juegos olimpicos", "MEDFAF","oro,plata y bronce","Fifa","unisex","2023","aluminio",40000,2,634,45.5,3.5,4.6)
     };
     vector<Usuario *>usuariosPreinscritos={
             new Cliente("maicol@hotmail.com","12","clie"),
@@ -166,8 +176,77 @@ int main(){
                         }
                     }
                     else if (opcMenuVendedor == 4) {   //Agregar a la tienda
+                        bool flagAgregarProducto = true;
+                        int opcProducto=0; //Agregar producto
+                        Camiseta* nuevaCamiseta;
+                        string nombre, referencia, color, marca, genero, modelo, material, categoria;
+                        int precio, garantia, stock;
+                        float talla;
+                        while (flagAgregarProducto){
+                            cout << "Que tipo de producto desea crear? \n" ;
+                            cout << "1) Ropa \n";
+                            cout << "2) Accesorio \n";
+                            cout << "3) Calzado \n";
+                            cout << "4) Condecoracion \n";
+                            cout << "Por favor digite la opcion\n";
+                            cin >> opcProducto;
 
+                            if(opcProducto==1) { //Agregar ropa
+                                bool flagRopa = true;
+                                while (flagRopa) {
+                                    cout << "Que tipo de ropa desea crear? \n";
+                                    cout << "1) Camiseta \n";
+                                    cout << "2) Chaqueta \n";
+                                    cout << "3) Licra \n";
+                                    cout << "4) Media \n";
+                                    cout << "5) Pantaloneta \n";
+                                    cout << "Por favor digite la opcion\n";
+                                    cin >> opcProducto;
+                                    if (opcProducto == 1) {
+                                        string tipoDeCuello, tipoDeporte, nombreEquipo;
+                                        cout << "Ingrese el nombre del producto: \n";
+                                        cin >> nombre;
+                                        cout << "Ingrese la referencia del producto: \n";
+                                        cin >> referencia;
+                                        cout << "Ingrese el color del producto: \n";
+                                        cin >> color;
+                                        cout << "Ingrese la marca del producto: \n";
+                                        cin >> marca;
+                                        cout << "Ingrese el tipo de genero del producto: \n";
+                                        cin >> genero;
+                                        cout << "Ingrese el modelo del producto: \n";
+                                        cin >> modelo;
+                                        cout << "Ingrese el material del producto: \n";
+                                        cin >> material;
+                                        cout << "Ingrese el precio del producto: \n";
+                                        cin >> precio;
+                                        cout << "Ingrese la garantia del producto: \n";
+                                        cin >> garantia;
+                                        cout << "Ingrese el stock del producto: \n";
+                                        cin >> stock;
+                                        cout << "Ingrese la talla del producto: \n";
+                                        cin >> talla;
+                                        cout << "Ingrese el tipo de deporte: \n";
+                                        cin >> tipoDeporte;
+                                        cout << "Ingrese el nombre del equipo: \n";
+                                        cin >> nombreEquipo;
+                                        cout << "Ingrese el tipo de cuello de la camiseta: \n";
+                                        cin >> tipoDeCuello;
 
+                                        nuevaCamiseta = new Camiseta(nombre, referencia, color, marca, genero, modelo,
+                                                                     material, precio, garantia, stock, talla,
+                                                                     tipoDeporte, nombreEquipo, true, tipoDeCuello);
+                                        listaProductos.push_back(nuevaCamiseta);
+                                        cout << "El producto se ha agregado con exito!" << endl;
+                                        flagRopa= false;
+                                    }
+                                }
+                            }
+                            else {
+                                cout << "Opcion invalida" << endl;
+                            }
+                            flagAgregarProducto= false;
+                        }
                     }
                     else if (opcMenuVendedor == 5) {        //Imprimir usuario
                         cout << usuariosRegistrados.getNuevoVendedor() << endl;
@@ -258,10 +337,6 @@ int main(){
             cout << "La opcion ingresada no es valida... \n\n";
         }
     }
-
-
-
-
 
 
     return 0;

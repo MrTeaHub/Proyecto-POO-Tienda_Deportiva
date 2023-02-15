@@ -67,13 +67,6 @@ void Empleado::setTipoEmpleado(int tipoEmpleado) {
     this->tipoEmpleado = tipoEmpleado;
 }
 
-void Empleado::calcularNomina() {
-    cout <<"hola";
-}
-
-void Empleado::calcularBeneficios() {
-    cout <<"hola";
-}
 
 void Empleado::print(ostream &out){
     out << "NOMBRE: " << nombre << endl;

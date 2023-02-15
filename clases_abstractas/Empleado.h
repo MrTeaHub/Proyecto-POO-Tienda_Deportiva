@@ -49,10 +49,6 @@ public:
 
     void setTipoEmpleado(int tipoEmpleado);
 
-    void calcularNomina()override;
-
-    void calcularBeneficios()override;
-
     void print(ostream &out);
 
     friend ostream& operator<<(ostream &out, Empleado &e);

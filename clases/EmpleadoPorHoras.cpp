@@ -4,13 +4,12 @@
 
 #include "EmpleadoPorHoras.h"
 
-EmpleadoPorHoras::EmpleadoPorHoras(): Empleado(), Tienda(), valorHora(0), horasTrabajadas(0){}
+EmpleadoPorHoras::EmpleadoPorHoras(): Empleado(), valorHora(0), horasTrabajadas(0){}
 
 EmpleadoPorHoras::EmpleadoPorHoras(string nombre, string documentoIdentidad, string cargo, string fechaContratacion,
-                                   string Telefono, int productosVendidos, int tipoEmpleado, string Nombre,
-                                   string direccion, int numeroEmpleados, vector<Empleado *> empleados, int valorHora,
+                                   string Telefono, int productosVendidos, int tipoEmpleado, int valorHora,
                                    int horasTrabajadas):Empleado(nombre,documentoIdentidad,cargo,fechaContratacion, Telefono, productosVendidos, tipoEmpleado),
-                                                        Tienda(Nombre, direccion, numeroEmpleados, empleados), valorHora(valorHora), horasTrabajadas(horasTrabajadas){}
+                                                        valorHora(valorHora),horasTrabajadas(horasTrabajadas){}
 
 int EmpleadoPorHoras::getValorHora(){
     return valorHora;
@@ -28,12 +27,15 @@ void EmpleadoPorHoras::setHorasTrabajadas(int horasTrabajadas){
     this->horasTrabajadas=horasTrabajadas;
 }
 
-void EmpleadoPorHoras::calcularBeneficios(){
-    cout << "HOLA";
+float EmpleadoPorHoras::calcularBeneficios(){
+    int salario=0;
+    salario = horasTrabajadas*valorHora;
+
+    return salario;
 }
 
-void EmpleadoPorHoras::calcularNomina() {
-    cout << "HOLA";
+float EmpleadoPorHoras::calcularNomina() {
+    return calcularBeneficios()+2000;
 }
 
 ostream& operator<<(ostream &out, EmpleadoPorHoras EH){
