@@ -7,7 +7,7 @@
 #include "clases/Creador.h"
 #include "clases/Vendedor.h"
 #include "clases/RegistroUsuario.h"
-
+#include <stdlib.h>
 
 
 
@@ -54,6 +54,7 @@ int main(){
         else if(opcBase == 2){
             opcUsuario = usuariosRegistrados.verificarUsuarioYContrasena();
             //Imprimiendo los productos
+            system("cls");
             productosTienda.printTienda();
             cout << endl;
             bool flagEliminarCarrito = true;
@@ -63,6 +64,7 @@ int main(){
                 cout << "Bienvenido usuario! \n";
                 bool flagCliente = true;
                 while (flagCliente) {
+                    cout << endl;
                     int opcMenuCliente = cl.menu();
 
                     //SUBMENU DEL CLIENTE
@@ -108,6 +110,7 @@ int main(){
                 cout << "Bienvenido COMERCIANTE! \n";
                 bool flagVendedor = true;
                 while (flagVendedor) {
+                    cout << endl;
                     int opcMenuVendedor = vd.menu();
 
                     //SUBMENU DEL VENDEDOR
@@ -128,7 +131,9 @@ int main(){
                                 cin >> opcEliminarCarrito;
                                 if (opcEliminarCarrito <= carritoProductos.getNumeroDeProductos() &&opcEliminarCarrito > 0) {
                                     carritoProductos - opcEliminarCarrito;
-                                    flagEliminarCarrito = false;}
+                                    flagEliminarCarrito = false;
+                                    cout << "Producto eliminado del carrito de compras con exito\n\n";
+                                }
                                 else {
                                     cout << "Opcion invalida";
                                 }
@@ -155,6 +160,7 @@ int main(){
                 cout << "Bienvenido CREADOR! \n";
                 bool flagCreador = true;
                 while (flagCreador) {
+                    cout << endl;
                     int opcMenuCreador = cr.menu();
 
                     //SUBMENU CREADOR
@@ -175,17 +181,19 @@ int main(){
                                 cin >> opcEliminarCarrito;
                                 if (opcEliminarCarrito <= carritoProductos.getNumeroDeProductos() && opcEliminarCarrito > 0) {
                                     carritoProductos - opcEliminarCarrito;
-                                    flagEliminarCarrito = false;}
+                                    flagEliminarCarrito = false;
+                                    cout << "Producto eliminado del carrito de compras con exito\n\n";
+                                }
                                 else {
                                     cout << "Opcion invalida";
                                 }
                             }
                         }
                     }
-                    else if (opcMenuCreador == 4) {     //Agregar a la tienda
+                    else if (opcMenuCreador == 4){     //Agregar a la tienda
                         cout << usuariosRegistrados.getNuevoCreador() << endl;
                     }
-                    else if (opcMenuCreador == 5) {     //Eliminar de la tienda
+                    else if (opcMenuCreador == 5){     //Eliminar de la tienda
                         int pos = 0;
                         bool flagEliminarProducto = true;
                         cout << "Ingresa la posicion del producto que deseas eliminar\n";

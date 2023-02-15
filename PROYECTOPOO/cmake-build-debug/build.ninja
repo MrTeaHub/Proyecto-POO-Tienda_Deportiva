@@ -139,6 +139,12 @@ build CMakeFiles/Tienda_Deportiva_main.dir/clases/RegistroUsuario.cpp.obj: CXX_C
   OBJECT_DIR = CMakeFiles\Tienda_Deportiva_main.dir
   OBJECT_FILE_DIR = CMakeFiles\Tienda_Deportiva_main.dir\clases
 
+build CMakeFiles/Tienda_Deportiva_main.dir/clases/PaginaUsuario.cpp.obj: CXX_COMPILER__Tienda_Deportiva_main_Debug C$:/Users/VILL/CLionProjects/PROYECTOPOO/clases/PaginaUsuario.cpp || cmake_object_order_depends_target_Tienda_Deportiva_main
+  DEP_FILE = CMakeFiles\Tienda_Deportiva_main.dir\clases\PaginaUsuario.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Tienda_Deportiva_main.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tienda_Deportiva_main.dir\clases
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Tienda_Deportiva_main
@@ -147,7 +153,7 @@ build CMakeFiles/Tienda_Deportiva_main.dir/clases/RegistroUsuario.cpp.obj: CXX_C
 #############################################
 # Link the executable Tienda_Deportiva_main.exe
 
-build Tienda_Deportiva_main.exe: CXX_EXECUTABLE_LINKER__Tienda_Deportiva_main_Debug CMakeFiles/Tienda_Deportiva_main.dir/main.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/interfaces/Menu.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases_abstractas/Usuario.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/interfaces/InicioSesion.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/interfaces/Registro.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases/CarritoDeCompra.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases/Cliente.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases/Producto.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases/Tienda.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases/EmpleadoPorHoras.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases/EmpleadoTiempoCompleto.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases_abstractas/Empleado.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases/Creador.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases/Vendedor.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases/RegistroUsuario.cpp.obj
+build Tienda_Deportiva_main.exe: CXX_EXECUTABLE_LINKER__Tienda_Deportiva_main_Debug CMakeFiles/Tienda_Deportiva_main.dir/main.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/interfaces/Menu.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases_abstractas/Usuario.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/interfaces/InicioSesion.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/interfaces/Registro.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases/CarritoDeCompra.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases/Cliente.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases/Producto.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases/Tienda.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases/EmpleadoPorHoras.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases/EmpleadoTiempoCompleto.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases_abstractas/Empleado.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases/Creador.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases/Vendedor.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases/RegistroUsuario.cpp.obj CMakeFiles/Tienda_Deportiva_main.dir/clases/PaginaUsuario.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Tienda_Deportiva_main.dir

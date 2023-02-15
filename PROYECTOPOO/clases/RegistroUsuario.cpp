@@ -27,7 +27,7 @@ string RegistroUsuario::validarContrasena(){
             return c1;
         }
         else{
-            cout << "La contraseña ingresada no es la correcta...\n";
+            cout << "La contrasena ingresada no es la correcta...\n\n";
         }
     }
     return 0;
