@@ -1,5 +1,5 @@
 #include <iostream>
-#include "clases/ropa/Camiseta.h"
+#include "clases/Productos/ropa/Camiseta.h"
 
 using namespace std;
 
@@ -8,6 +8,7 @@ int main() {
                "Algodon",120000,3,30,9.5,
                "Futbol","Colombia", false,"V");
     cout << c << endl;
+    cout << "Daniel es gei";
     return 0;
 
 
