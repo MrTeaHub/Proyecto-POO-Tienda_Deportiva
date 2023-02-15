@@ -8,7 +8,7 @@ int main() {
                "Algodon",120000,3,30,9.5,
                "Futbol","Colombia", false,"V");
     cout << c << endl;
-    cout << "Daniel es gei";
+    cout << "Stoo es gei";
     return 0;
 
 
