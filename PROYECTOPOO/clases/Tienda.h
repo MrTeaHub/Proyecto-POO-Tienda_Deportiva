@@ -27,20 +27,14 @@ public:
     Tienda(vector<Producto *>listaProductos);   //AGREGACION
 
     string getNombreT();
-
     void setNombre(string nombre);
-
     string getDireccion();
-
     void setDireccion(string direccion);
-
     int getNumeroEmpleados();
-
     void setNumeroEmpleados(int numeroEmpleados);
-
     vector<Empleado* > getEmpleados();
-
     void setEmpleados(vector<Empleado* > lista);
+
 
     friend ostream& operator<<(ostream &out, Tienda i);
 
@@ -50,7 +44,7 @@ public:
 
     void operator -=(int z);
 
-
+    void printTienda();
 
     vector<Producto *> &getListaProductos();
 

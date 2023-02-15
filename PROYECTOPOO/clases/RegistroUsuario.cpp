@@ -111,7 +111,7 @@ void RegistroUsuario::crearUsuario(){
 int RegistroUsuario::verificarUsuarioYContrasena(){
     int opcInciarSesion = 0;
     bool flag = true;
-    bool flagContraseña=true;
+    bool flagContrasena=true;
     bool flagTotal = true;
     string correo_nombre = "";
     string contrasena = "";
@@ -132,13 +132,13 @@ int RegistroUsuario::verificarUsuarioYContrasena(){
                 cin >> correo_nombre;
                 for (Usuario *u: usuariosBaseDatos) {
                     if (u->getTipoUsuario() == 0) {
-                        Cliente *cl = static_cast<Cliente *>(u);
-                        if ( correo_nombre == cl->getNombreCliente() or  correo_nombre == cl->getCorreoUsuario()){
-                            while (flagContraseña) {
+                        nuevoCliente = static_cast<Cliente *>(u);
+                        if ( correo_nombre == nuevoCliente->getNombreCliente() or  correo_nombre == nuevoCliente->getCorreoUsuario()){
+                            while (flagContrasena) {
                                 cout << "Ingrese su contrasena:\n";
                                 cin >> contrasena;
-                                if (cl->getContrasena() == contrasena) {
-                                    flagContraseña = false;
+                                if (nuevoCliente->getContrasena() == contrasena) {
+                                    flagContrasena = false;
                                     flagTotal = false;
                                     cout << "Inicio de sesion realizado con exito!\n";
                                     return 1;
@@ -157,13 +157,13 @@ int RegistroUsuario::verificarUsuarioYContrasena(){
                 cin >> correo_nombre;
                 for (Usuario *u: usuariosBaseDatos) {
                     if (u->getTipoUsuario() == 1) {
-                        Vendedor *vd = static_cast<Vendedor *>(u);
-                        if ( correo_nombre == vd->getNombreVendedor() or  correo_nombre == vd->getCorreoUsuario()){
-                            while (flagContraseña) {
+                        nuevoVendedor = static_cast<Vendedor *>(u);
+                        if (correo_nombre == nuevoVendedor->getNombreVendedor() or correo_nombre == nuevoVendedor->getCorreoUsuario()){
+                            while (flagContrasena) {
                                 cout << "Ingrese su contrasena:\n";
                                 cin >> contrasena;
-                                if (vd->getContrasena() == contrasena) {
-                                    flagContraseña = false;
+                                if (nuevoVendedor->getContrasena() == contrasena) {
+                                    flagContrasena = false;
                                     flagTotal = false;
                                     cout << "Inicio de sesion realizado con exito!\n";
                                     return 2;
@@ -184,13 +184,14 @@ int RegistroUsuario::verificarUsuarioYContrasena(){
 
                 for (Usuario *u: usuariosBaseDatos) {
                     if (u->getTipoUsuario() == 2) {
-                        Creador *cl = static_cast<Creador *>(u);
-                        if (correo_nombre == cl->getCorreoUsuario()){
-                            while (flagContraseña) {
+                        nuevoCreador = static_cast<Creador *>(u);
+
+                        if (correo_nombre == nuevoCreador->getCorreoUsuario()){
+                            while (flagContrasena) {
                                 cout << "Ingrese su contrasena:\n";
                                 cin >> contrasena;
-                                if (cl->getContrasena() == contrasena) {
-                                    flagContraseña = false;
+                                if (nuevoCreador->getContrasena() == contrasena) {
+                                    flagContrasena = false;
                                     flagTotal = false;
                                     cout << "Inicio de sesion realizado con exito!\n";
                                     return 3;

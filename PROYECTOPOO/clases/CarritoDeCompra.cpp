@@ -36,8 +36,10 @@ int CarritoDeCompra::getNumeroDeProductos(){
 //SOBRECARGA
 ostream& operator<<(ostream &out, CarritoDeCompra c){
     if(!c.getProductosCarrito().empty()){
+        int i = 0;
         for(Producto *p: c.getProductosCarrito()){
-            cout << p << endl;
+            cout << i << ") " << p << endl;
+            i++;
         }
     }else{
         cout << "No hay productos para mostrar." << endl;
@@ -55,8 +57,10 @@ void CarritoDeCompra::operator+(Tienda productosDisponibles){
         cout << "Por favor digite la posicion del producto que desea anadir al carrito de compras: \n";
         cin >> posicion;
 
-        if(posicion <= productosDisponibles.getCantidadDeProductos()){
+        if(posicion <= productosDisponibles.getCantidadDeProductos() && posicion > 0){
             productosCarrito.push_back(productosDisponibles.getListaProductos()[posicion-1]);
+
+            cout << "Producto agregado con exito!\n\n";
 
             flag = false;
             }
@@ -94,17 +98,12 @@ int CarritoDeCompra::menu(){
         }
         else if(opcMenuCarrito == 2){
             return opcMenuCarrito;
-
-            /*int opcEliminarCarrito = 0;
-            cout << "Escriba la posicion del producto que desea eliminar \n";
-            cin >> opcEliminarCarrito;
-            //variableCarrito - opcEliminarCarrito;*/
         }
         else if(opcMenuCarrito == 3){
-            cout << "Regresando a la tienda..." ;
+            cout << "Regresando a la tienda...\n\n" ;
         }
         else{
-            cout << "Opcion Invalida..";
+            cout << "Opcion Invalida... \n\n";
         }
 
     }

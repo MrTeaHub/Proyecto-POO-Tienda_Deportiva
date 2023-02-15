@@ -9,6 +9,8 @@
 #include "clases/RegistroUsuario.h"
 
 
+
+
 using namespace std;
 
 int main(){
@@ -20,9 +22,9 @@ int main(){
         new Producto("Tabla", 1200),
     };
     vector<Usuario *>usuariosPreinscritos={
-            new Cliente("maicol@hotmail.com","1231","das"),
-            new Creador("villegas@gmail.com","1212","VillegasPRO"),
-            new Vendedor("jesus@unillanos.edu.co", "4111", "jes"),
+            new Cliente("maicol@hotmail.com","12","clie"),
+            new Creador("crea","12","crea"),
+            new Vendedor("jesus@unillanos.edu.co", "12", "vend"),
             new Cliente("maicol@hotmail.com","1231","maicolBeltran"),
     };
     RegistroUsuario usuariosRegistrados;
@@ -35,6 +37,8 @@ int main(){
     usuariosRegistrados.setUsuariosBaseDatos(usuariosPreinscritos);
     bool flagBase = true;
     int opcBase = 0, opcUsuario = 0;
+
+
     cout << "TIENDA LAS DELICIAS\n";
 
     while(flagBase){
@@ -50,29 +54,50 @@ int main(){
         else if(opcBase == 2){
             opcUsuario = usuariosRegistrados.verificarUsuarioYContrasena();
             //Imprimiendo los productos
-            int i=1;
-            cout << "Lista de Productos: \n" ;
-            for(Producto* pro : productosTienda.getListaProductos()){
-                cout << i << ") " << pro << endl;
-                i++;
-            }
+            productosTienda.printTienda();
             cout << endl;
-
+            bool flagEliminarCarrito = true;
             if(opcUsuario==1){
+
                 //CLIENTE
                 cout << "Bienvenido usuario! \n";
                 bool flagCliente = true;
                 while (flagCliente) {
                     int opcMenuCliente = cl.menu();
 
-                    if (opcMenuCliente == 1) {
+                    //SUBMENU DEL CLIENTE
+                    if(opcMenuCliente == 1){    //Imprimir tienda
+                        productosTienda.printTienda();
+                        cout << endl;
+                    }
+                    else if(opcMenuCliente == 2) {  //Agregar del carrito
+                        productosTienda.printTienda();
                         carritoProductos + productosTienda;
-                    } else if (opcMenuCliente == 2) {
+                    }
+                    else if (opcMenuCliente == 3) {   //Opciones del carrito
                         cout << carritoProductos;
-                    } else if (opcMenuCliente == 3) {}
-                    else if (opcMenuCliente == 4) {
+                        if(carritoProductos.menu()==2){
+                            while(flagEliminarCarrito) {
+                                int opcEliminarCarrito = 0;
+                                cout << "Escriba la posicion del producto que desea eliminar \n";
+                                cin >> opcEliminarCarrito;
+                                if (opcEliminarCarrito <= carritoProductos.getNumeroDeProductos() &&opcEliminarCarrito > 0) {
+                                    carritoProductos - opcEliminarCarrito;
+                                    flagEliminarCarrito = false;
+                                    cout << "Producto eliminado del carrito de compras con exito\n\n";
+                                }
+                                else {
+                                    cout << "Opcion invalida...\n\n";
+                                }
+                            }
+                        }
+                    }
+                    else if (opcMenuCliente == 4) {     //Imprimir usuario
+                        cout << usuariosRegistrados.getNuevoCliente() << endl;
+                    }
+                    else if (opcMenuCliente == 5) {     //Cerrar sesion
                         flagCliente = false;
-                    } else if (opcMenuCliente == 5) {
+                    } else if (opcMenuCliente == 6) {       //salir
                         flagBase = false;
                         flagCliente = false;
                     }
@@ -85,15 +110,41 @@ int main(){
                 while (flagVendedor) {
                     int opcMenuVendedor = vd.menu();
 
-                    if (opcMenuVendedor == 1) {
+                    //SUBMENU DEL VENDEDOR
+                    if(opcMenuVendedor == 1){    //Imprimir tienda
+                        productosTienda.printTienda();
+                        cout << endl;
+                    }
+                    else if(opcMenuVendedor == 2) {  //Agregar del carrito
+                        productosTienda.printTienda();
                         carritoProductos + productosTienda;
-                    } else if (opcMenuVendedor == 2) {
+                    }
+                    else if (opcMenuVendedor == 3) { //Opciones del carrito
                         cout << carritoProductos;
-                    } else if (opcMenuVendedor == 3) {
-                    } else if (opcMenuVendedor == 4) {}
-                    else if (opcMenuVendedor == 5) {
+                        if(carritoProductos.menu()==2){
+                            while(flagEliminarCarrito) {
+                                int opcEliminarCarrito = 0;
+                                cout << "Escriba la posicion del producto que desea eliminar \n";
+                                cin >> opcEliminarCarrito;
+                                if (opcEliminarCarrito <= carritoProductos.getNumeroDeProductos() &&opcEliminarCarrito > 0) {
+                                    carritoProductos - opcEliminarCarrito;
+                                    flagEliminarCarrito = false;}
+                                else {
+                                    cout << "Opcion invalida";
+                                }
+                            }
+                        }
+                    }
+                    else if (opcMenuVendedor == 4) {   //Agregar a la tienda
+
+
+                    }
+                    else if (opcMenuVendedor == 5) {        //Imprimir usuario
+                        cout << usuariosRegistrados.getNuevoVendedor() << endl;
+                    }
+                    else if (opcMenuVendedor == 6) {        //Cerrar sesion
                         flagVendedor = false;
-                    } else if (opcMenuVendedor == 6) {
+                    } else if (opcMenuVendedor == 7) {      //Salir
                         flagBase = false;
                         flagVendedor = false;
                     }
@@ -106,12 +157,35 @@ int main(){
                 while (flagCreador) {
                     int opcMenuCreador = cr.menu();
 
-                    if (opcMenuCreador == 1) {
+                    //SUBMENU CREADOR
+                    if(opcMenuCreador == 1){    //Imprimir tienda
+                        productosTienda.printTienda();
+                        cout << endl;
+                    }
+                    else if(opcMenuCreador == 2) {      //Agregar del carrito
+                        productosTienda.printTienda();
                         carritoProductos + productosTienda;
-                    } else if (opcMenuCreador == 2) {
+                    }
+                    else if (opcMenuCreador == 3) {     //Opciones del carrito
                         cout << carritoProductos;
-                    } else if (opcMenuCreador == 3) {
-                    } else if (opcMenuCreador == 4) {
+                        if(carritoProductos.menu()==2){
+                            while(flagEliminarCarrito) {
+                                int opcEliminarCarrito = 0;
+                                cout << "Escriba la posicion del producto que desea eliminar \n";
+                                cin >> opcEliminarCarrito;
+                                if (opcEliminarCarrito <= carritoProductos.getNumeroDeProductos() && opcEliminarCarrito > 0) {
+                                    carritoProductos - opcEliminarCarrito;
+                                    flagEliminarCarrito = false;}
+                                else {
+                                    cout << "Opcion invalida";
+                                }
+                            }
+                        }
+                    }
+                    else if (opcMenuCreador == 4) {     //Agregar a la tienda
+                        cout << usuariosRegistrados.getNuevoCreador() << endl;
+                    }
+                    else if (opcMenuCreador == 5) {     //Eliminar de la tienda
                         int pos = 0;
                         bool flagEliminarProducto = true;
                         cout << "Ingresa la posicion del producto que deseas eliminar\n";
@@ -125,10 +199,13 @@ int main(){
                             }
                         }
                     }
-                    else if (opcMenuCreador == 5) {
-                    } else if (opcMenuCreador == 6) {
+                    else if (opcMenuCreador == 6) {     //Imprimir usuario
+                        cout << usuariosRegistrados.getNuevoCreador() << endl;
+                    }
+                    else if (opcMenuCreador == 7) {     //Cerrar sesion
                         flagCreador = false;
-                    } else if(opcMenuCreador == 7){
+                    }
+                    else if(opcMenuCreador == 8){       //Salir
                         flagBase = false;
                         flagCreador = false;
                     }

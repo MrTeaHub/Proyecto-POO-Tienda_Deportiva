@@ -62,6 +62,14 @@ void Tienda::operator -=(int z){
     listaProductos.erase(listaProductos.begin() + (z-1));
 }
 
+void Tienda::printTienda() {
+    int i=1;
+    cout << "Lista de Productos: \n" ;
+    for(Producto* pro : listaProductos){
+        cout << i << ") " << pro << endl;
+        i++;
+        }
+}
 
 //SOBRECARGA
 ostream& operator<<(ostream &out, Tienda i){
