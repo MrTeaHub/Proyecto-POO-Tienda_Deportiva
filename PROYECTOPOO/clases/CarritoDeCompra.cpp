@@ -36,7 +36,7 @@ int CarritoDeCompra::getNumeroDeProductos(){
 //SOBRECARGA
 ostream& operator<<(ostream &out, CarritoDeCompra c){
     if(!c.getProductosCarrito().empty()){
-        int i = 0;
+        int i = 1;
         for(Producto *p: c.getProductosCarrito()){
             cout << i << ") " << p << endl;
             i++;
@@ -45,7 +45,7 @@ ostream& operator<<(ostream &out, CarritoDeCompra c){
         cout << "No hay productos para mostrar." << endl;
     }
 
-    cout << "Tienes en el carrito " << c.getNumeroDeProductos() << " productos. \n\n";
+    cout << "\nTienes en el carrito " << c.getNumeroDeProductos() << " productos. \n\n";
     return out;
 }
 
@@ -86,7 +86,7 @@ void CarritoDeCompra::operator -(int posicion){
 int CarritoDeCompra::menu(){
     int opcMenuCarrito = 0;
     while(opcMenuCarrito != 3){
-        cout << "¿Que deseas hacer?  \n";
+        cout << "Que deseas hacer?  \n";
         cout << "1) Comprar productos del carrito de compras: \n";
         cout << "2) Eliminar producto del carrito de compras: \n";
         cout << "3) Regresar a la tienda: \n";

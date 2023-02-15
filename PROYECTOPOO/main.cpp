@@ -55,6 +55,7 @@ int main(){
         else if(opcBase == 2){
             opcUsuario = usuariosRegistrados.verificarUsuarioYContrasena();
             //Imprimiendo los productos
+            cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
             productosTienda.printTienda();
             cout << endl;
             bool flagEliminarCarrito = true;
@@ -69,14 +70,18 @@ int main(){
 
                     //SUBMENU DEL CLIENTE
                     if(opcMenuCliente == 1){    //Imprimir tienda
+                        cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
                         productosTienda.printTienda();
                         cout << endl;
                     }
                     else if(opcMenuCliente == 2) {  //Agregar del carrito
+                        cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
                         productosTienda.printTienda();
+                        cout << "\n\n";
                         carritoProductos + productosTienda;
                     }
                     else if (opcMenuCliente == 3) {   //Opciones del carrito
+                        cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
                         cout << carritoProductos;
                         if(carritoProductos.menu()==2){
                             while(flagEliminarCarrito) {
@@ -115,14 +120,18 @@ int main(){
 
                     //SUBMENU DEL VENDEDOR
                     if(opcMenuVendedor == 1){    //Imprimir tienda
+                        cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
                         productosTienda.printTienda();
                         cout << endl;
                     }
                     else if(opcMenuVendedor == 2) {  //Agregar del carrito
+                        cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
                         productosTienda.printTienda();
+                        cout << "\n\n";
                         carritoProductos + productosTienda;
                     }
                     else if (opcMenuVendedor == 3) { //Opciones del carrito
+                        cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
                         cout << carritoProductos;
                         if(carritoProductos.menu()==2){
                             while(flagEliminarCarrito) {
@@ -165,14 +174,18 @@ int main(){
 
                     //SUBMENU CREADOR
                     if(opcMenuCreador == 1){    //Imprimir tienda
+                        cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
                         productosTienda.printTienda();
                         cout << endl;
                     }
                     else if(opcMenuCreador == 2) {      //Agregar del carrito
+                        cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
                         productosTienda.printTienda();
+                        cout << "\n\n";
                         carritoProductos + productosTienda;
                     }
                     else if (opcMenuCreador == 3) {     //Opciones del carrito
+                        cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
                         cout << carritoProductos;
                         if(carritoProductos.menu()==2){
                             while(flagEliminarCarrito) {
