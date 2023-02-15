@@ -7,8 +7,7 @@
 #include "clases/Creador.h"
 #include "clases/Vendedor.h"
 #include "clases/RegistroUsuario.h"
-#include <stdlib.h>
-
+#include "clases/PaginaWeb.h"
 
 
 using namespace std;
@@ -35,11 +34,13 @@ int main(){
     Creador cr;
     productosTienda.setListaProductos(listaProductos);
     usuariosRegistrados.setUsuariosBaseDatos(usuariosPreinscritos);
+    PaginaWeb pagina(usuariosRegistrados);
     bool flagBase = true;
     int opcBase = 0, opcUsuario = 0;
 
 
     cout << "TIENDA LAS DELICIAS\n";
+    cout << pagina;
 
     while(flagBase){
         cout << "Que opcion desea realizar \n";
@@ -54,7 +55,6 @@ int main(){
         else if(opcBase == 2){
             opcUsuario = usuariosRegistrados.verificarUsuarioYContrasena();
             //Imprimiendo los productos
-            system("cls");
             productosTienda.printTienda();
             cout << endl;
             bool flagEliminarCarrito = true;
